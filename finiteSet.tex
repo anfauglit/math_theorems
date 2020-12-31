@@ -1,0 +1,36 @@
+\documentclass[letterpaper, 10pt]{article}
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{mathtools}
+\usepackage{enumitem}
+\usepackage{listrings}
+
+\DeclarePairedDelimiter\setsize{\lvert}{\rvert}
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}
+
+\setlength{\parindent}{0pt}
+
+\newtheorem*{thm*}{Theorem}[section]
+\numberwithin{thm}{subsection}
+\newtheorem{thm}{Theorem}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{col}[thm]{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{mydef}[thm]{Definition}
+
+\begin{document}
+\begin{mydef}
+	A set $X$ is \textbf{finite} if and only if there is one-to-one function $f\colon X \to n$ for some natural number $n$.
+\end{mydef}
+
+\begin{mydef}
+	Suppose that $X$ is a finite set. Let $n$ be the least natural number such that there is a one-to-one function $f\colon X \to n$.
+	Then $n$ is the \textbf{number of elements} in the set $X$, and we write $\setsize{X} = n$.
+\end{mydef}
+
+\begin{thm}
+	Let A be finite and let $n = \setsize{A}. If $f\colon A \to n$ is one-to-one, then $f$ is onto $n$.
+\end{thm}
+
+\end{document}
+
