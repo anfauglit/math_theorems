@@ -2,15 +2,13 @@
 \usepackage{amsmath, amsthm, amssymb}
 \usepackage{mathtools}
 \usepackage{enumitem}
-\usepackage{listrings}
+\usepackage{listings}
 
 \DeclarePairedDelimiter\setsize{\lvert}{\rvert}
 \DeclarePairedDelimiter\norm{\lVert}{\rVert}
 
 \setlength{\parindent}{0pt}
 
-\newtheorem*{thm*}{Theorem}[section]
-\numberwithin{thm}{subsection}
 \newtheorem{thm}{Theorem}
 \newtheorem{lem}[thm]{Lemma}
 \newtheorem{col}[thm]{Corollary}
@@ -19,6 +17,43 @@
 \newtheorem{mydef}[thm]{Definition}
 
 \begin{document}
+\section{Mappings}
+\begin{lem}
+	If $f\colon S \to T$, $g\colon T \to S$ are any mappings such that
+	\begin{equation*}
+		g \circ f = 1_S
+	\end{equation*}
+	then $f$ is injective and $g$ is surjective.
+\end{lem}
+
+\begin{thm}
+	A mapping $f\colon S \to T$ is a bijection if and only if there is a
+	mapping $g \colon T \to S$ to satisfy the following:
+	\begin{align*}
+		g \circ f = 1_S && f \circ g = 1_T
+	\end{align*}
+\end{thm}
+
+\begin{thm}
+	If $f \colon A \to B$ and $g \colon B \to C$ are both injective then $g
+	\circ f$ is injective.
+\end{thm}
+
+\begin{thm}
+	If $f \colon A \to B$ and $g \colon B \to C$ are both surjective then $g
+	\circ f$ is surjective.
+\end{thm}
+
+\begin{thm}
+	If $f \colon A \to B$, $g \colon B \to C$ and $g \circ f$ is surjective
+	then $g$ is surjective. 
+\end{thm}
+
+\begin{thm}
+	If $f \colon A \to B$, $g \colon B \to C$ and $g \circ f$ is injective 
+	then $f$ is injective. 
+\end{thm}
+
 \begin{mydef}
 	A set $X$ is \textbf{finite} if and only if there is one-to-one function $f\colon X \to n$ for some natural number $n$.
 \end{mydef}
@@ -32,5 +67,12 @@
 	Let A be finite and let $n = \setsize{A}. If $f\colon A \to n$ is one-to-one, then $f$ is onto $n$.
 \end{thm}
 
-\end{document}
+\begin{col}
+	If $A$ is finite and $n = \setsize{A}$, then there is a bijection $f\colon A \to n$.
+\end{col}
 
+\begin{thm}
+	Let $f\colon A \to A$ be one-to-one where $A$ is a finite set. Then $f$ is onto $A$.
+\end{thm}
+
+\end{document}
